@@ -14,12 +14,13 @@ public class Game {
 			GameObject playerObject = getPlayerObject();
 			
 			boolean win = playerObject.beats(randomObject);
-			String compareText = playerObject.compareText(randomObject);
+			//String compareText = playerObject.compareText(randomObject);
 			
 			System.out.println(playerObject + " -- " + randomObject);
-			System.out.println(compareText);
+			//System.out.println(compareText);
 			
 			if(win) {
+				System.out.println(playerObject + " beats " + randomObject);
 				System.out.println("win");
 				++score;
 			}
@@ -27,6 +28,7 @@ public class Game {
 				System.out.println("draw");
 			}
 			else {
+				System.out.println(randomObject + " beats " + playerObject);
 				System.out.println("lose");
 				--score;
 			}
